@@ -1,0 +1,145 @@
+Booting...
+ProcessManagment.createProcess: creating new Process..
+MemoryManager.loadProgram:init with size 100 is going to be read
+MemoryManager.loadProgram: Process has been allocated 3 from 32 pages at the beginning
+ProcessManagment.createProcess: [pid 1 priority 0 pageTableAddress 1 allocateTableAddress 1]
+
+Scheduler.addProcess: new process 1 added, readylist length: 1
+
+BootLoader: initial process created, pid: 1
+BootLoader: starting the cpu
+Scheduler.timesliceOver: process 0 is suspended
+Scheduler.timesliceOver: switching to process 1
+MMU.resolveAddress: Pagefault by virtual Address: 000
+MMU.resolveAddress: RahmenNr: 0 Offset: 0
+
+CPU.executeTimeslice: pc: 000, command: create_console
+IO.createConsole: new console [id: 1, title: Prozess 1]
+MMU.resolveAddress: RahmenNr: 0 Offset: 1
+
+CPU.executeTimeslice: pc: 01, command: write_val Moin\0020Moin
+MMU.resolveAddress: RahmenNr: 0 Offset: 2
+
+CPU.executeTimeslice: pc: 02, command: write_nl
+MMU.resolveAddress: RahmenNr: 0 Offset: 3
+
+CPU.executeTimeslice: pc: 03, command: write_val >
+MMU.resolveAddress: Pagefault by virtual Address: 10
+MMU.resolveAddress: RahmenNr: 1 Offset: 0
+
+CPU.executeTimeslice: pc: 10, command: read 20
+MMU.resolveAddress: Pagefault by virtual Address: 50
+MMU.resolveAddress: RahmenNr: 2 Offset: 0
+
+IO.read: adding event to read queue [type:0, id:1, address:8, content:null]
+Scheduler.block: process 1 is waiting for event [type:0, id:1, address:8, content:null]
+Scheduler.block: switching to idle process
+IO.receiveReadContent: received: '' from console 1
+IO.receiveReadContent: adding event to result queue [type:0, id:1, address:8, content:]
+CPU.executeTimeslice: interrupt for event [type:0, id:1, address:8, content:]
+Scheduler.unblock: received event [type:0, id:1, address:8, content:]
+Scheduler.unblock: process 1 is returning from sleeping
+Scheduler.timesliceOver: process 0 is suspended
+Scheduler.timesliceOver: switching to process 1
+MMU.resolveAddress: RahmenNr: 1 Offset: 1
+
+CPU.executeTimeslice: pc: 11, command: load 1 20
+MMU.resolveAddress: RahmenNr: 2 Offset: 0
+
+MMU.resolveAddress: RahmenNr: 1 Offset: 2
+
+CPU.executeTimeslice: pc: 12, command: load 2 #exit
+MMU.resolveAddress: RahmenNr: 1 Offset: 3
+
+CPU.executeTimeslice: pc: 13, command: jeq 11
+MMU.resolveAddress: Pagefault by virtual Address: 20
+MMU.resolveAddress: RahmenNr: 2 Offset: 0
+
+CPU.executeTimeslice: pc: 20, command: create_process 20
+MMU.resolveAddress: RahmenNr: 2 Offset: 0
+
+ProcessManagment.createProcess: creating new Process..
+ProcessManagment.createProcess: [pid 2 priority 0 pageTableAddress 0 allocateTableAddress 0]
+
+Scheduler.addProcess: new process 2 added, readylist length: 1
+
+MMU.resolveAddress: RahmenNr: 2 Offset: 1
+
+CPU.executeTimeslice: pc: 21, command: wait 1
+Scheduler.block: process 1 is waiting for event [type:2, id:2, address:-1, content:null]
+Scheduler.block: switching to process 2
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+IO.receiveReadContent: received: 'kjljl' from console 1
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+IO.receiveReadContent: received: '' from console 1
+Scheduler.timesliceOver: no one else is waiting
+IO.receiveReadContent: received: '' from console 1
+IO.receiveReadContent: received: '' from console 1
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+IO.receiveReadContent: received: 'l
+
+
+
+' from console 1
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
+Scheduler.timesliceOver: no one else is waiting
